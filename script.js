@@ -5,7 +5,7 @@ var finalScoreEl = document.getElementById("finalScore");
 var gameoverDiv = document.getElementById("gameover");
 var questionsEl = document.getElementById("questions");
 var quizTimer = document.getElementById("timer");
-var startQuizButton = document.getElementById("startbtn");
+var startQuizButton = document.getElementById("startBtn");
 var startQuizDiv = document.getElementById("startpage");
 var highscoreContainer = document.getElementById("highscoreContainer");
 var highscoreDiv = document.getElementById("high-scorePage");
@@ -19,57 +19,43 @@ var buttonB = document.getElementById("b");
 var buttonC = document.getElementById("c");
 var buttonD = document.getElementById("d");
 
-// Quiz question object
+//Quiz questions
 var quizQuestions = [{
-    question: "How many elements can you apply an 'ID' attribute to?",
-    choiceA: "As many as you want",
-    choiceB: "3",
-    choiceC: "1",
-    choiceD: "128",
-    correctAnswer: "c"},
-  {
-    question: "What does DOM stand for?",
-    choiceA: "Document Object Model",
-    choiceB: "Display Object Management",
-    choiceC: "Digital Ordinance Model",
-    choiceD: "Desktop Oriented Mode",
+    question: "What are variables?",
+    choiceA: "Containers for storing data values.",
+    choiceB: "The region of light.",
+    choiceC: "An action box.",
+    choiceD: "A special kind of music from Asia.",
     correctAnswer: "a"},
-   {
-    question: "What is used primarily to add styling to a web page?",
-    choiceA: "HTML",
-    choiceB: "CSS",
-    choiceC: "Python",
-    choiceD: "React.js",
+  {
+    question: "Is Java and Javascript the same?",
+    choiceA: "True.",
+    choiceB: "False.",
+    choiceC: "A and B are true.",
+    choiceD: "A and B are false.",
     correctAnswer: "b"},
+   {
+    question: "Which company developed JavaScript?",
+    choiceA: "Netscape.",
+    choiceB: "Sony.",
+    choiceC: "Amazon.",
+    choiceD: "Apple.",
+    correctAnswer: "a"},
     {
-    question: "What HTML tags are JavaScript code wrapped in?",
-    choiceA: "&lt;div&gt;",
-    choiceB: "&lt;link&gt;",
-    choiceC: "&lt;head&gt;",
-    choiceD: "&lt;script&gt;",
+    question: "What is a prompt box?",
+    choiceA: "An area in a theatre in which a prompter sits, located in front of the footlights beneath the stage.;",
+    choiceB: "A music box.",
+    choiceC: "A popup that has a notice within it.",
+    choiceD: "A box which allows the user to enter input by providing a text box.gt;",
     correctAnswer: "d"},
     {
-    question: "When is localStorage data cleared?",
-    choiceA: "No expiration time",
-    choiceB: "On page reload",
-    choiceC: "On browser close",
-    choiceD: "On computer restart",
+    question: "What is a function?",
+    choiceA: "A block of code designed to perform a particular task.",
+    choiceB: "On page reloaAn activity that is natural to or the purpose of a person.",
+    choiceC: " A large or formal social event or ceremony.",
+    choiceD: "An Array.",
     correctAnswer: "a"},  
     {
-    question: "What does WWW stand for?",
-    choiceA: "Web World Workings",
-    choiceB: "Weak Winter Wind",
-    choiceC: "World Wide Web",
-    choiceD: "Wendy Wants Waffles",
-    correctAnswer: "c"},
-    {
-    question: "What HTML attribute references an external JavaScript file?",
-    choiceA: "href",
-    choiceB: "src",
-    choiceC: "class",
-    choiceD: "index",
-    correctAnswer: "b"},
-        
     
     ];
 // Other global variables

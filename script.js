@@ -43,7 +43,7 @@ var quizQuestions = [{
     correctAnswer: "a"},
     {
     question: "What is a prompt box?",
-    choiceA: "An area in a theatre in which a prompter sits, located in front of the footlights beneath the stage.;",
+    choiceA: "An area in a theatre in which a prompter sits, located in front of the footlights beneath the stage.",
     choiceB: "A music box.",
     choiceC: "A popup that has a notice within it.",
     choiceD: "A box which allows the user to enter input by providing a text box.gt;",
@@ -51,17 +51,16 @@ var quizQuestions = [{
     {
     question: "What is a function?",
     choiceA: "A block of code designed to perform a particular task.",
-    choiceB: "On page reloaAn activity that is natural to or the purpose of a person.",
+    choiceB: "An activity that is natural to or the purpose of a person.",
     choiceC: " A large or formal social event or ceremony.",
     choiceD: "An Array.",
     correctAnswer: "a"},  
-    {
-    
     ];
+
 // Other global variables
 var finalQuestionIndex = quizQuestions.length;
 var currentQuestionIndex = 0;
-var timeLeft = 76;
+var timeLeft = 60;
 var timerInterval;
 var score = 0;
 var correct;
@@ -131,9 +130,7 @@ submitScoreBtn.addEventListener("click", function highscore(){
         savedHighscores.push(currentHighscore);
         localStorage.setItem("savedHighscores", JSON.stringify(savedHighscores));
         generateHighscores();
-
-    }
-    
+    }  
 });
 
 // This function clears the list for the high scores and generates a new high score list from local storage
@@ -185,12 +182,11 @@ function checkAnswer(answer){
 
     if (answer === correct && currentQuestionIndex !== finalQuestionIndex){
         score++;
-        alert("That Is Correct!");
         currentQuestionIndex++;
         generateQuizQuestion();
+
         //display in the results div that the answer is correct.
     }else if (answer !== correct && currentQuestionIndex !== finalQuestionIndex){
-        alert("That Is Incorrect.")
         currentQuestionIndex++;
         generateQuizQuestion();
         //display in the results div that the answer is wrong.

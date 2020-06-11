@@ -19,7 +19,7 @@ const buttonB = document.getElementById("b");
 const buttonC = document.getElementById("c");
 const buttonD = document.getElementById("d");
 
-//Quiz questions
+//Quiz questions and correct answers
 const quizQuestions = [{
     question: "What are variables?",
     choiceA: "Containers for storing data values.",
@@ -189,8 +189,9 @@ function checkAnswer(answer) {
         currentQuestionIndex++;
         generateQuizQuestion();
 
-        //Answer correct or incorrect
+        //Answer correct or if incorrect deduct 10 seconds
     } else if (answer !== correct && currentQuestionIndex !== finalQuestionIndex) {
+        timeLeft = timeLeft - 10;
         currentQuestionIndex++;
         generateQuizQuestion();
         //display in the results div that the answer is wrong.
